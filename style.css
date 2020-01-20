@@ -1,0 +1,36 @@
+body            { font-family: sans-serif; background: #ecf0f1; }
+a               {text-decoration:none;color: #000;}
+a:visited       {text-decoration:none;color: #000;}
+
+._head{
+    background: #ffffff;
+}
+
+._head .head_title{
+    float: left;
+    font-family: Cooper Black;
+    font-size: 48px;
+    text-align: center;
+}
+
+._head .head_button{
+    font-size: 30px;
+    font-family: 微软雅黑;
+    background: #ffffff;
+    border: none;
+    text-align: center;
+    padding: 0 30 0 30;
+    outline: none;
+}
+
+._head .head_button:hover{
+    background: #FFCC99;
+}
+
+._head .head_button:active{
+    background: #FFCC99;
+}
+
+._head .head_button:focus{
+    background: #FFCC99;
+}
