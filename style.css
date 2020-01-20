@@ -9,17 +9,17 @@ a:visited       {text-decoration:none;color: #000;}
 ._head .head_title{
     float: left;
     font-family: Cooper Black;
-    font-size: 48px;
+    font-size: 22px;
     text-align: center;
 }
 
 ._head .head_button{
-    font-size: 30px;
+    font-size: 16px;
     font-family: 微软雅黑;
     background: #ffffff;
     border: none;
     text-align: center;
-    padding: 0 30 0 30;
+    padding: 0 10 0 10;
     outline: none;
 }
 
