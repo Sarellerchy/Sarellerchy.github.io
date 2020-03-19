@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://tongji.cn.miaozhen.com/#/app/ar/aa/behavioralRoute -->
+<html lang="en" data-ng-app="app" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+  
+  <!--<base href="/web/">--><base href=".">
+  <!--[if lte IE 9]>
+    <script>
+      document.writeln("<base href='"+ location.protocol + "//" + location.host + "/web/" +"'>");
+    </script>
+  <![endif]-->
+  <title>index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="http://tongji.cn.miaozhen.com/web/favicon.ico" rel="shortcut icon">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/animate.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/simple-line-icons.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/font.css" type="text/css">
+
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/dataTables.bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-datatables.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/fixedColumns.dataTables.min.css" type="text/css">
+
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/select2-bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/select2.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/toaster.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/daterangepicker.css" type="text/css">
+	
+	<link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ball-atom.css" type="text/css">
+	
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/app.css" type="text/css">
+  <link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/myStyle.css" type="text/css">
+
+<link rel="stylesheet" href="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/layer.css" id="layuicss-skinlayercss"></head>
+<body ng-controller="AppCtrl" style="" class="ng-scope">
+<!-- uiView:  --><div class="app ng-scope app-aside-fixed" id="app" ng-class="{
+  &#39;app-header-fixed&#39;:app.settings.headerFixed,
+  &#39;app-aside-fixed&#39;:app.settings.asideFixed,
+  &#39;app-aside-folded&#39;:app.settings.asideFolded,
+  &#39;app-aside-dock&#39;:app.settings.asideDock,
+  &#39;container&#39;:app.settings.container}" ng-style="app.settings.headerFixed&amp;&amp;userChoice&amp;&amp;showAnnouncement?{&#39;padding-top&#39;:&#39;90px&#39;}:&#39;&#39;" ui-view="">  <style class="ng-scope">
+    .panel-blue .panel-heading{
+      color: white !important;
+      background-color: #19a9d5 !important;
+      border-color: #189ec8 !important;
+    }
+    .panel-blue .btn-info{
+      color: #ffffff !important;
+      background-color: #19a9d5 !important;
+      border-color: #189ec8 !important;
+    }
+  </style>
+<!-- navbar 头部导航栏 -->
+  <!-- ngInclude: 'tpl/blocks/header.html' --><div data-ng-include=" &#39;tpl/blocks/header.html&#39; " class="app-header navbar ng-scope" ng-controller="HeaderCtrl"><!-- navbar header -->
+<!-- ngIf: userChoice&&showAnnouncement -->
+<div class="navbar-header bg-info dker">
+  <button class="pull-right visible-xs dk" ui-toggle-class="show" data-target=".navbar-collapse">
+    <i class="glyphicon glyphicon-cog"></i>
+  </button>
+  <button class="pull-right visible-xs" ui-toggle-class="off-screen" data-target=".app-aside" ui-scroll="app">
+    <i class="glyphicon glyphicon-align-justify"></i>
+  </button>
+  <!-- brand -->
+  <a href="http://tongji.cn.miaozhen.com/web/#/" class="navbar-brand text-lt">
+    <i class="fa"><img src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/shiroilogo.png" alt="logo" style="max-height:40px;margin-left:-10px;"></i>
+    <span class="hidden-folded m-l-xs ng-binding">SiteMonitor</span>
+  </a>
+  <!-- / brand -->
+</div>
+<!-- / navbar header -->
+
+<!-- navbar collapse -->
+<div class="collapse pos-rlt navbar-collapse box-shadow bg-info dker">
+  <!-- buttons -->
+  <div class="nav navbar-nav hidden-xs">
+    <a href="http://tongji.cn.miaozhen.com/web/" class="btn no-shadow navbar-btn" ng-click="app.settings.asideFolded = !app.settings.asideFolded">
+      <i class="fa fa-dedent fa-fw"></i>
+    </a>
+  </div>
+  <!-- / buttons -->
+  
+  <!-- link and dropdown -->
+  <ul class="nav navbar-nav hidden-sm" ng-hide="isHistoryNeedHide()">
+    <li class="dropdown pos-stc" dropdown="">
+      <a href="http://tongji.cn.miaozhen.com/web/" class="dropdown-toggle" dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+        <span class="ng-binding">BMW | BMW-官方小程序 | 默认视图 (7-3062-3402)</span>
+        <span class="caret"></span>
+      </a>
+      <div class="dropdown-menu wrapper w-full bg-white history">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="m-l-xs m-t-xs m-b-xs font-bold show-text ng-binding">浏览历史
+              <button ui-sref="app.index" type="button" class="btn btn-default index-btn ng-binding" href="#/app/index">回到首页 &gt;&gt;</button>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <!-- ngRepeat: item in user.HistoryViews --><a href="http://tongji.cn.miaozhen.com/web/" class="col-xs-12 item-a ng-binding ng-scope" ng-repeat="item in user.HistoryViews" ng-click="choose(item)">BMW|BMW-官方小程序|默认视图 (7-3062-3402)</a><!-- end ngRepeat: item in user.HistoryViews -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <!-- / link and dropdown -->
+  
+  <!-- nabar right -->
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown" is-open="lang.isopen" dropdown="">
+      <a href="http://tongji.cn.miaozhen.com/web/" class="dropdown-toggle ng-binding" dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+        <!-- ngIf: selectLang == 'English' -->
+        <!-- ngIf: selectLang == '简体中文' --><img src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/zh-cn.png" ng-if="selectLang == &#39;简体中文&#39;" class="ng-scope"><!-- end ngIf: selectLang == '简体中文' -->
+        简体中文 <b class="caret"></b>
+      </a>
+      <!-- dropdown -->
+      <ul class="dropdown-menu animated fadeInRight w">
+        <!-- ngRepeat: (langKey, label) in langs --><li ng-repeat="(langKey, label) in langs" class="ng-scope">
+          <a ng-click="setLang(langKey, $event)" href="http://tongji.cn.miaozhen.com/web/" class="ng-binding">
+            <!-- ngIf: langKey == 'en' --><img src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/en-us.png" ng-if="langKey == &#39;en&#39;" class="ng-scope"><!-- end ngIf: langKey == 'en' -->
+            <!-- ngIf: langKey == 'zh_CN' -->
+            English
+          </a>
+        </li><!-- end ngRepeat: (langKey, label) in langs --><li ng-repeat="(langKey, label) in langs" class="ng-scope">
+          <a ng-click="setLang(langKey, $event)" href="http://tongji.cn.miaozhen.com/web/" class="ng-binding">
+            <!-- ngIf: langKey == 'en' -->
+            <!-- ngIf: langKey == 'zh_CN' --><img src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/zh-cn.png" ng-if="langKey == &#39;zh_CN&#39;" class="ng-scope"><!-- end ngIf: langKey == 'zh_CN' -->
+            简体中文
+          </a>
+        </li><!-- end ngRepeat: (langKey, label) in langs -->
+      </ul>
+      <!-- / dropdown -->
+    </li>
+    <li class="hidden-xs">
+      <a ui-fullscreen="" id="screen" class=""><i class="fa fa-expand fa-fw text"></i><i class="fa fa-compress fa-fw text-active"></i></a>
+    </li>
+    
+    <!-- ngIf: menuTree._15.show --><li class="dropdown hidden-sm ng-scope" is-open="openHelp" dropdown="" id="15" ng-if="menuTree._15.show">
+      <!-- ngIf: menuTree._15._1501.show --><a href="http://tongji.cn.miaozhen.com/web/" class="dropdown-toggle ng-scope" dropdown-toggle="" id="1501" ng-if="menuTree._15._1501.show" aria-haspopup="true" aria-expanded="false">
+        <b class="fa fa-question-circle"></b>
+      </a><!-- end ngIf: menuTree._15._1501.show -->
+      <!-- dropdown -->
+      <ul class="dropdown-menu animated fadeInRight w">
+        <!-- ngIf: menuTree._15._1501.show && menuTree._15._1501._150101.show --><li id="150101" ng-if="menuTree._15._1501.show &amp;&amp; menuTree._15._1501._150101.show" class="ng-scope">
+          <a ng-click="menuTree._15._1501._150101.click()" target="_blank" class="ng-binding">
+            <i class="fa fa-book"></i>
+            帮助文档
+          </a>
+        </li><!-- end ngIf: menuTree._15._1501.show && menuTree._15._1501._150101.show -->
+        <!-- ngIf: menuTree._15._1501.show && menuTree._15._1501._150102.show --><li id="150102" ng-if="menuTree._15._1501.show &amp;&amp; menuTree._15._1501._150102.show" class="ng-scope">
+          <a ng-click="menuTree._15._1501._150102.click()" target="_blank" class="ng-binding">
+            <i class="fa fa-code-fork"></i>
+            API文档
+          </a>
+        </li><!-- end ngIf: menuTree._15._1501.show && menuTree._15._1501._150102.show -->
+      </ul>
+      <!-- / dropdown -->
+    </li><!-- end ngIf: menuTree._15.show -->
+    <li class="dropdown" dropdown="">
+      <a href="http://tongji.cn.miaozhen.com/web/" class="dropdown-toggle clear" dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+        <span class="hidden-sm hidden-md ng-binding">BMW-wedo</span>
+        <span class="hidden ng-binding" id="orgTypeName">客户</span>
+        <b class="caret"></b>
+      </a>
+      <!-- dropdown -->
+      <ul class="dropdown-menu animated fadeInRight w">
+        <li>
+          <a href="javascript:;" ng-click="menuTree._16.jump()"><i class="fa fa-star text-success m-r-xs"></i><span translate="word.AdvancedFunction" class="ng-scope">高级功能</span></a>
+          <!-- <a href="javascript:;" ng-if="(!user.IsAdmin && user.Role !=2) && menuTree._18._1801._180101.show && !(menuTree._18._1801._180101.show && menuTree._18._1801._180102.show)" ng-click="menuTree._16.jump()"><i class="glyphicon glyphicon-cloud-download text-success m-r-xs"></i><span translate="word.BatchDownload"></span></a>
+          <a href="javascript:;" ng-if="(!user.IsAdmin && user.Role !=2) && menuTree._18._1801._180102.show && !(menuTree._18._1801._180101.show && menuTree._18._1801._180102.show)" ng-click="menuTree._16.jump()"><i class="glyphicon glyphicon-cloud-download text-success m-r-xs"></i><span>Timed Task</span></a>-->
+          <!-- ngIf: menuTree._17.show && menuTree._17._1701.show && menuTree._17._1701._170103.show --><a href="javascript:;" ui-toggle-class="active" target=".settings" ng-click="menuTree._17._1701._170103.setting($target)" id="170103" ng-if="menuTree._17.show &amp;&amp; menuTree._17._1701.show &amp;&amp; menuTree._17._1701._170103.show" class="ng-binding ng-scope"><i class="fa fa-spin fa-gear text-info-dker m-r-xs"></i>界面设置</a><!-- end ngIf: menuTree._17.show && menuTree._17._1701.show && menuTree._17._1701._170103.show -->
+          <!-- ngIf: showChangePwd && menuTree._17.show && menuTree._17._1701.show && menuTree._17._1701._170101.show --><a href="javascript:;" ng-if="showChangePwd &amp;&amp; menuTree._17.show &amp;&amp; menuTree._17._1701.show &amp;&amp; menuTree._17._1701._170101.show" ng-click="menuTree._17._1701._170101.changePwd()" id="170101" class="ng-binding ng-scope"><i class="fa fa-key text-info-dker m-r-xs"></i>修改密码</a><!-- end ngIf: showChangePwd && menuTree._17.show && menuTree._17._1701.show && menuTree._17._1701._170101.show -->
+          <a href="javascript:;" ng-click="signout()" class="ng-binding"><i class="icon-logout text-danger-dker m-r-xs"></i>退出登录</a>
+        </li>
+      </ul>
+      <!-- / dropdown -->
+    </li>
+  </ul>
+  <!-- / navbar right -->
+</div>
+<!-- / navbar collapse -->
+<!-- ngInclude: 'tpl/modal/changePwd.html' --><div ng-include="&#39;tpl/modal/changePwd.html&#39;" class="ng-scope"><div class="wrapper-md hide ng-scope" id="changePwdDiv" ng-controller="ChangePwdModalCtrl">
+    <form class="form-horizontal ng-pristine ng-valid">
+        <div class="panel panel-info">
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label ng-scope" translate="label.Email">邮箱</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="model.Email">
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+    
+                <div class="form-group">
+                    <label class="col-sm-3 control-label ng-scope" translate="label.OldPassword">原密码</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control ng-pristine ng-untouched ng-valid" ng-model="model.OldPassword">
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label ng-scope" translate="label.NewPassword">新密码</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control ng-pristine ng-untouched ng-valid" ng-model="model.NewPassword">
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label ng-scope" translate="label.ConfirmPassword">确认密码</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control ng-pristine ng-untouched ng-valid" ng-model="model.ConfirmPassword">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="panel-footer text-center">
+                <button type="button" class="btn btn-sm btn-primary m-r-sm ng-scope" translate="operate.Save" ng-click="save()"> 保  存 </button>
+                <button type="button" class="btn btn-sm btn-default ng-scope" translate="operate.Cancel" ng-click="cancel()"> 取  消 </button>
+            </div>
+        </div>
+    </form>
+</div></div></div>
+  <!-- / navbar 头部导航栏 -->
+
+  <!-- menu 菜单项 -->
+  <!-- ngInclude: 'tpl/blocks/aside.html' --><div data-ng-include=" &#39;tpl/blocks/aside.html&#39; " class="app-aside hidden-xs bg-light dker b-r"><div class="aside-wrap ng-scope">
+  <div class="navi-wrap">
+    <!-- 之所以用两个nav 是因为在同一个nav里 如果a标签的ui-serf变了的话是不会更改href的 -->
+    <!-- 这就导致了一个问题 切换非小程序和小程序站点的时候 权限更新不会修改a标签的href 导致权限失效 -->
+    <!-- nav -->
+    <!-- ngIf: !isMiniApp && !isApp -->
+    <!-- nav -->
+    <!-- miniapp nav -->
+    <!-- ngIf: isMiniApp --><!-- ngInclude: 'tpl/blocks/nav_miniapp.html' --><nav ng-if="isMiniApp" ui-nav="" class="navi ng-scope" ng-include="&#39;tpl/blocks/nav_miniapp.html&#39;"><!-- list 菜单列表 -->
+<!-- ngIf: menuTree.show --><ul class="nav ng-scope" ng-if="menuTree.show">
+	<!-- ngIf: menuTree._01.show --><li class="hidden-folded padder m-t m-b-sm text-muted text-xs ng-scope" id="001" ng-if="menuTree._01.show">
+		<span translate="menu.promotionalActivity.PromotionalActivity" class="ng-scope">推广活动</span>
+	</li><!-- end ngIf: menuTree._01.show -->
+	<!-- ngIf: menuTree._01.show && menuTree._01._0101.show --><li ng-class="{active:$state.includes(&#39;app.pa.fa&#39;)}" ng-if="menuTree._01.show &amp;&amp; menuTree._01._0101.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto" id="01">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-bullhorn icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.promotionalActivity.activity.Activity">推广活动</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<li ui-sref-active="active" ng-class="{active: menuTree._01._0101._010101.active}">
+				<a id="010101" ui-sref="app.pa.fa.createActivity" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;推广活动-新建推广活动&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/pa/fa/createActivity">
+					<span translate="menu.promotionalActivity.activity.CreateActivity" class="ng-scope">新建推广活动</span>
+				</a>
+			</li>
+			<li ui-sref-active="active" ng-class="{active: menuTree._01._0101._010102.active}">
+				<a id="010102" ui-sref="app.pa.fa.activityList" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;推广活动-新建推广活动&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/pa/fa/activityList">
+					<span translate="menu.promotionalActivity.activity.ActivityList" class="ng-scope">推广活动列表</span>
+				</a>
+			</li>
+			<li ui-sref-active="active" ng-class="{active: menuTree._01._0101._010103.active}">
+				<a id="010103" ui-sref="app.pa.fa.promotionalChannel" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;推广活动-新建推广活动&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/pa/fa/promotionalChannel">
+					<span translate="menu.promotionalActivity.activity.PromotionalChannelManagement" class="ng-scope">推广渠道管理</span>
+				</a>
+			</li>
+		</ul>
+	</li><!-- end ngIf: menuTree._01.show && menuTree._01._0101.show -->
+	<!-- ngIf: menuTree._10.show --><li class="hidden-folded padder m-t m-b-sm text-muted text-xs ng-scope" id="10" ng-if="menuTree._10.show">
+		<span translate="menu.defaultReports.DefaultReports" class="ng-scope">默认报告</span>
+	</li><!-- end ngIf: menuTree._10.show -->
+	<!-- ngIf: menuTree._10.show && menuTree._10._1001.show --><li ng-class="{active:$state.includes(&#39;app.dr.do&#39;)}" ng-if="menuTree._10.show &amp;&amp; menuTree._10._1001.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto" id="1001">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-signal icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.defaultReports.dataOverview.DataOverview">趋势概览</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._10._1001._100101.show --><li ui-sref-active="active" ng-if="menuTree._10._1001._100101.show" class="ng-scope">
+				<a id="100101" ui-sref="app.dr.do.visitOverview" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;趋势概览-访问概览&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/do/visitOverview">
+					<span translate="menu.defaultReports.dataOverview.VisitOverview" class="ng-scope">访问概览</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1001._100101.show -->
+			<!-- ngIf: menuTree._10._1001._100102.show --><li ui-sref-active="active" ng-if="menuTree._10._1001._100102.show" class="ng-scope">
+				<a id="100102" ui-sref="app.dr.defaultReport({tables:&#39;date,hour&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;趋势概览-时段分析&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=date%2Chour">
+					<span translate="menu.defaultReports.dataOverview.PeriodAnalysis" class="ng-scope">时段分析</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1001._100102.show -->
+		</ul>
+	</li><!-- end ngIf: menuTree._10.show && menuTree._10._1001.show -->
+	<!-- ngIf: menuTree._10.show && menuTree._10._1002.show --><li ng-class="{active:$state.includes(&#39;app.dr.sa&#39;), active: menuTree._10._1002.active}" ng-if="menuTree._10.show &amp;&amp; menuTree._10._1002.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto" id="1002">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-random icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.defaultReports.sourceAnalysis.SourceAnalysis">来源分析</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._10._1002._100207.show --><li ui-sref-active="active" ng-if="menuTree._10._1002._100207.show" ng-class="{active: menuTree._10._1002._100207.active}" class="ng-scope">
+				<a id="100207" ui-sref="app.dr.defaultReport({tables:&#39;wxcampaign_report&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;来源分析-推广活动分析&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=wxcampaign_report">
+					<span translate="menu.defaultReports.sourceAnalysis.WxCampaign" class="ng-scope">推广活动分析</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1002._100207.show -->
+			<!-- ngIf: menuTree._10._1002._100208.show --><li ui-sref-active="active" ng-if="menuTree._10._1002._100208.show" ng-class="{active: menuTree._10._1002._100208.active}" class="ng-scope">
+				<a id="100208" ui-sref="app.dr.defaultReport({tables:&#39;wxsenario_report&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;来源分析-场景值分析&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=wxsenario_report">
+					<span translate="menu.defaultReports.sourceAnalysis.WxSenario" class="ng-scope">场景值分析</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1002._100208.show -->
+			<!-- ngIf: menuTree._10._1002._100201.show -->
+			<!-- ngIf: menuTree._10._1002._100202.show --><li ui-sref-active="active" ng-if="menuTree._10._1002._100202.show" ng-class="{active: menuTree._10._1002._100202.active}" class="ng-scope">
+				<a id="100202" ui-sref="app.dr.defaultReport({tables:&#39;ad_mz_campaign,ad_mz_website_name,ad_mz_spot,ad_mz_keyword&#39;, showFilterGIVT: true})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;来源分析秒针广告&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=ad_mz_campaign%2Cad_mz_website_name%2Cad_mz_spot%2Cad_mz_keyword&amp;showFilterGIVT=true">
+					<span translate="menu.defaultReports.sourceAnalysis.MiaozhenAd" class="ng-scope">秒针广告</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1002._100202.show -->
+			<!-- ngIf: menuTree._10._1002._100203.show -->
+			<!-- ngIf: menuTree._10._1002._100204.show -->
+			<!-- ngIf: menuTree._10._1002._100205.show -->
+			<!-- ngIf: menuTree._10._1002._100206.show -->
+		</ul>
+	</li><!-- end ngIf: menuTree._10.show && menuTree._10._1002.show -->
+	<!-- ngIf: menuTree._10.show && menuTree._10._1003.show --><li ng-class="{active:$state.includes(&#39;app.dr.aa&#39;), active: menuTree._10._1003.active}" ng-if="menuTree._10.show &amp;&amp; menuTree._10._1003.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto" id="1003">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-user icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.defaultReports.audienceAnalysis.AudienceAnalysis">受众分析</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._10._1003._100301.show --><li ui-sref-active="active" id="100301" ng-if="menuTree._10._1003._100301.show" ng-class="{active: menuTree._10._1003._100301.active}" class="ng-scope">
+				<a ui-sref="app.dr.defaultReport({tables:&#39;os,device_type,device_brand,device_model&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;受众分析-设备&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=os%2Cdevice_type%2Cdevice_brand%2Cdevice_model">
+					<span translate="menu.defaultReports.audienceAnalysis.Device" class="ng-scope">设备</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1003._100301.show -->
+			<!-- ngIf: menuTree._10._1003._100302.show -->
+			<!-- ngIf: menuTree._10._1003._100303.show --><li ui-sref-active="active" id="100303" ng-if="menuTree._10._1003._100303.show" ng-class="{active: menuTree._10._1003._100303.active}" class="ng-scope">
+				<a ui-sref="app.dr.defaultReport({tables:&#39;country,province,city&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;受众分析-地域分布&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=country%2Cprovince%2Ccity">
+					<span translate="menu.defaultReports.audienceAnalysis.Geo" class="ng-scope">地域分布</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1003._100303.show -->
+		</ul>
+	</li><!-- end ngIf: menuTree._10.show && menuTree._10._1003.show -->
+	<!-- ngIf: menuTree._10.show && menuTree._10._1004.show --><li ng-class="{active:$state.includes(&#39;app.dr.sc&#39;), active: menuTree._10._1004.active}" ng-if="menuTree._10.show &amp;&amp; menuTree._10._1004.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto" id="1004">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-th-large icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.defaultReports.siteContent.SiteContent">网站内容</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._10._1004._100401.show --><li ui-sref-active="active" id="100401" ng-if="menuTree._10._1004._100401.show" ng-class="{active: menuTree._10._1004._100401.active}" class="ng-scope">
+				<a ui-sref="app.dr.defaultReport({tables:&#39;page_path,page_url,exit_url,entrance_url&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;网站内容-受访内容&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=page_path%2Cpage_url%2Cexit_url%2Centrance_url">
+					<span translate="menu.defaultReports.siteContent.VisitedContent" class="ng-scope">受访内容</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1004._100401.show -->
+			<!-- ngIf: menuTree._10._1004._100402.show --><li ui-sref-active="active" id="100402" ng-if="menuTree._10._1004._100402.show" ng-class="{active: menuTree._10._1004._100402.active}" class="ng-scope">
+				<a ui-sref="app.dr.defaultReport({tables:&#39;page_channel_group_1,page_channel_group_2,page_channel_group_3,page_channel_group_4,page_channel_group_5&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;网站内容-受访频道&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=page_channel_group_1%2Cpage_channel_group_2%2Cpage_channel_group_3%2Cpage_channel_group_4%2Cpage_channel_group_5">
+					<span translate="menu.defaultReports.siteContent.Channels" class="ng-scope">受访频道</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1004._100402.show -->
+		</ul>
+	</li><!-- end ngIf: menuTree._10.show && menuTree._10._1004.show -->
+	<!-- ngIf: menuTree._10.show && menuTree._10._1005.show --><li ng-class="{active:$state.includes(&#39;app.dr.ea&#39;), active: menuTree._10._1005.active}" ng-if="menuTree._10.show &amp;&amp; menuTree._10._1005.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto" id="1005">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-info-sign icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.defaultReports.eventAnalysis.EventAnalysis">交互事件</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._10._1005._100501.show --><li ui-sref-active="active" id="100501" ng-if="menuTree._10._1005._100501.show" ng-class="{active: menuTree._10._1005._100501.active}" class="ng-scope">
+				<a ui-sref="app.dr.defaultReport({tables:&#39;event_statis,event_type,event_action,event_label&#39;})" ui-sref-opts="{inherit: false}" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;交互事件-事件统计&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=event_statis%2Cevent_type%2Cevent_action%2Cevent_label">
+					<span translate="menu.defaultReports.eventAnalysis.EventTracking" class="ng-scope">事件统计</span>
+				</a>
+			</li><!-- end ngIf: menuTree._10._1005._100501.show -->
+		</ul>
+	</li><!-- end ngIf: menuTree._10.show && menuTree._10._1005.show -->
+	<!-- ngIf: menuTree._12.show --><li ng-click="menuTree._12.refreshReportFolder($event)" id="12" ng-if="menuTree._12.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-list icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.defaultReports.CustomReports">自定义报告</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<li ui-sref-active="active">
+				<a ui-sref="app.dr.cr.customReportFolderList" href="http://tongji.cn.miaozhen.com/web/#/app/dr/cr/customReportFolderList">
+					<span class="font-bold ng-scope" translate="menu.defaultReports.CustomReportFolderList">文件夹列表</span>
+				</a>
+			</li>
+			<li>
+				<a onclick="_jump(&#39;app.dr.cr.customReportList&#39;, {id:0})">
+					<span class="font-bold ng-scope" translate="menu.defaultReports.CustomReportList">报告列表</span>
+				</a>
+			</li>
+			<!-- ngRepeat: item in reportFolders --><li ui-sref-active="active" ng-repeat="item in reportFolders" class="ng-scope">
+				<a ui-sref="app.dr.cr.customReportList({id:item.Id})" title="沈" href="http://tongji.cn.miaozhen.com/web/#/app/dr/cr/customReportList?id=3384">
+					<span class="ng-binding">沈</span>
+				</a>
+			</li><!-- end ngRepeat: item in reportFolders --><li ui-sref-active="active" ng-repeat="item in reportFolders" class="ng-scope">
+				<a ui-sref="app.dr.cr.customReportList({id:item.Id})" title="Phebe" href="http://tongji.cn.miaozhen.com/web/#/app/dr/cr/customReportList?id=3437">
+					<span class="ng-binding">Phebe</span>
+				</a>
+			</li><!-- end ngRepeat: item in reportFolders --><li ui-sref-active="active" ng-repeat="item in reportFolders" class="ng-scope">
+				<a ui-sref="app.dr.cr.customReportList({id:item.Id})" title="nEqual" href="http://tongji.cn.miaozhen.com/web/#/app/dr/cr/customReportList?id=3568">
+					<span class="ng-binding">nEqual</span>
+				</a>
+			</li><!-- end ngRepeat: item in reportFolders --><li ui-sref-active="active" ng-repeat="item in reportFolders" class="ng-scope">
+				<a ui-sref="app.dr.cr.customReportList({id:item.Id})" title="星传" href="http://tongji.cn.miaozhen.com/web/#/app/dr/cr/customReportList?id=3632">
+					<span class="ng-binding">星传</span>
+				</a>
+			</li><!-- end ngRepeat: item in reportFolders -->
+		</ul>
+	</li><!-- end ngIf: menuTree._12.show -->
+	<li>
+		<a ui-sref="app.dr.cr.customReportList" ng-hide="true" href="http://tongji.cn.miaozhen.com/web/#/app/dr/cr/customReportList" class="ng-hide">
+			<i class="glyphicon glyphicon-list icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.defaultReports.CustomReports">自定义报告</span>
+		</a>
+	</li>
+	<!-- ngIf: menuTree._13.show --><li class="hidden-folded padder m-t m-b-sm text-muted text-xs ng-scope" ng-if="menuTree._13.show">
+		<span translate="menu.advancedReport.AdvancedReport" class="ng-scope">高阶报告</span>
+	</li><!-- end ngIf: menuTree._13.show -->
+	<!-- ngIf: menuTree._13.show && menuTree._13._1301.show --><li ng-class="{active:$state.includes(&#39;app.ar.aa&#39;), active: __tables.indexOf(&#39;search_keywords&#39;) != -1, active: __tables.indexOf(&#39;promotion_campaign&#39;) != -1}" id="13" ng-if="menuTree._13.show &amp;&amp; menuTree._13._1301.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto" id="1301">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-repeat icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.advancedReport.advanceAnalysis.AdvanceAnalysis">高阶分析</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._13._1301._130101.show -->
+			<!-- ngIf: menuTree._13._1301._130102.show -->
+			<!-- ngIf: menuTree._13._1301._130103.show -->
+			<!-- ngIf: menuTree._13._1301._130104.show -->
+			<!-- ngIf: menuTree._13._1301._130105.show --><li ui-sref-active="active" id="130105" ng-if="menuTree._13._1301._130105.show" class="ng-scope active">
+				<a ui-sref="app.ar.aa.behavioralRoute" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;高阶分析-路径分析&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/ar/aa/behavioralRoute">
+					<span translate="menu.advancedReport.advanceAnalysis.BehavioralRouteAnalysis" class="ng-scope">路径分析</span>
+				</a>
+			</li><!-- end ngIf: menuTree._13._1301._130105.show -->
+			<!-- ngIf: menuTree._13._1301._130106.show --><li ui-sref-active="active" id="130106" ng-if="menuTree._13._1301._130106.show" class="ng-scope">
+				<a ui-sref="app.ar.aa.previousNext" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;高阶分析-页面上下游&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/ar/aa/previousNext">
+					<span translate="menu.advancedReport.advanceAnalysis.PreviousandNextPage" class="ng-scope">页面上下游</span>
+				</a>
+			</li><!-- end ngIf: menuTree._13._1301._130106.show -->
+			<!-- ngIf: menuTree._13._1301._130107.show -->
+			<!-- ngIf: menuTree._13._1301._130108.show --><li ui-sref-active="active" id="130108" ng-if="menuTree._13._1301._130108.show" class="ng-scope">
+				<a ui-sref="app.dr.retainReport({tables:&#39;retain_new,retain_active&#39;,isRetain:true,mobileDevice:true,hideDiagram:true})" href="http://tongji.cn.miaozhen.com/web/#/app/dr/retainReport?tables=retain_new%2Cretain_active&amp;hideDiagram=true&amp;mobileDevice=true&amp;isRetain=true">
+					<span translate="menu.advancedReport.advanceAnalysis.Retain" class="ng-scope">留存分析</span>
+				</a>
+			</li><!-- end ngIf: menuTree._13._1301._130108.show -->
+		</ul>
+	</li><!-- end ngIf: menuTree._13.show && menuTree._13._1301.show -->
+	<!-- ngIf: menuTree._13.show && menuTree._13._1302.show --><li ng-class="{ active:$state.includes(&#39;app.ar.t&#39;),active:!$state.includes(&#39;app.ar.ex.siteivt&#39;),active: __tables.indexOf(&#39;leads&#39;) != -1 }" id="1302" ng-if="menuTree._13.show &amp;&amp; menuTree._13._1302.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-wrench icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.advancedReport.tools.Tool">工具</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._13._1302._130201.show --><li ui-sref-active="active" id="130201" ng-if="menuTree._13._1302._130201.show" class="ng-scope">
+				<a ui-sref="app.ar.t.scheduleReport" href="http://tongji.cn.miaozhen.com/web/#/app/ar/t/scheduleReport">
+					<span translate="menu.advancedReport.tools.ScheduleReport" class="ng-scope">预定报告</span>
+				</a>
+			</li><!-- end ngIf: menuTree._13._1302._130201.show -->
+			<!-- ngIf: menuTree._13._1302._130204.show --><li ui-sref-active="active" id="130204" ng-if="menuTree._13._1302._130204.show" class="ng-scope">
+				<a ui-sref="app.ar.t.hiveReport" onclick="stm_clicki(&#39;send&#39;, &#39;event&#39;,&#39;工具-数据下载&#39;,document.getElementsByClassName(&#39;hidden-md&#39;)[0].innerText,document.getElementById(&#39;orgTypeName&#39;).innerText,1)" href="http://tongji.cn.miaozhen.com/web/#/app/ar/t/hiveReport">
+					<span translate="menu.advancedReport.tools.HiveReport" class="ng-scope">数据下载</span>
+				</a>
+			</li><!-- end ngIf: menuTree._13._1302._130204.show -->
+			<!-- ngIf: menuTree._13._1302._130202.show --><li ui-sref-active="active" id="130202" ng-if="menuTree._13._1302._130202.show" class="ng-scope">
+				<a ui-sref="app.ar.t.seniorEventList" href="http://tongji.cn.miaozhen.com/web/#/app/ar/t/seniorEventList">
+					<span translate="menu.advancedReport.tools.SeniorEventAnalysis" class="ng-scope">高级事件统计</span>
+				</a>
+			</li><!-- end ngIf: menuTree._13._1302._130202.show -->
+			<!--  <li ui-sref-active="active" id="130205" ng-if="false">
+				<a ui-sref="{{menuTree._13._1302._130205.url}}">
+					<span>Leads Verify - Detail</span>
+				</a>
+			</li>
+			<li ui-sref-active="active" id="130206" ng-if="menuTree._13._1302._130206.show">
+				<a ui-sref="{{menuTree._13._1302._130206.url}}">
+					<span>Leads Verify</span>
+				</a>
+			</li>-->
+		</ul>
+	</li><!-- end ngIf: menuTree._13.show && menuTree._13._1302.show -->
+	<!-- ngIf: menuTree._13.show && menuTree._13._1303.show --><li ng-class="{ active:$state.includes(&#39;app.ar.defaultReport&#39;)}" id="1303" ng-if="menuTree._13.show &amp;&amp; menuTree._13._1303.show" class="ng-scope">
+		<a href="http://tongji.cn.miaozhen.com/web/" class="auto">
+			<span class="pull-right text-muted">
+				<i class="fa fa-fw fa-angle-right text"></i>
+				<i class="fa fa-fw fa-angle-down text-active"></i>
+			</span>
+			<i class="glyphicon glyphicon-list icon text-primary-dker"></i>
+			<span class="font-bold ng-scope" translate="menu.advancedReport.level.Level">层级分析</span>
+		</a>
+		<ul class="nav nav-sub dk">
+			<!-- ngIf: menuTree._13._1303._130301.show --><li ui-sref-active="active" id="130301" ng-if="menuTree._13._1303._130301.show" class="ng-scope">
+				<a ui-sref="app.dr.defaultReport({tables:&#39;share_level,share_user&#39;, hideDevice: true, hideDiagram: true})" href="http://tongji.cn.miaozhen.com/web/#/app/dr/defaultReport?tables=share_level%2Cshare_user&amp;hideDiagram=true&amp;hideDevice=true">
+					<span translate="menu.advancedReport.level.ShareReport" class="ng-scope">分享传播分析</span>
+				</a>
+			</li><!-- end ngIf: menuTree._13._1303._130301.show -->
+		</ul>
+	</li><!-- end ngIf: menuTree._13.show && menuTree._13._1303.show -->
+	<!-- ngIf: menuTree._19.show -->
+	<!-- ngIf: menuTree._19.show && menuTree._19._1901.show -->
+
+
+	<!-- ngIf: access.editable && menuTree._14.show -->
+	<!-- ngIf: access.editable && menuTree._14.show && menuTree._14._1401.show -->
+	<!-- ngIf: access.editable && menuTree._14.show && menuTree._14._1402.show -->
+	<!-- ngIf: access.editable && menuTree._14.show && menuTree._14._1403.show -->
+	<li class="hidden-folded padder m-t m-b-sm text-muted text-xs navbar-md">
+	</li>
+</ul><!-- end ngIf: menuTree.show -->
+<!-- / list 菜单列表 --></nav><!-- end ngIf: isMiniApp -->
+    <!-- app nav -->
+    <!-- ngIf: isApp -->
+    <!-- miniapp nav -->
+  </div>
+</div></div>
+  <!-- / menu 菜单项 -->
+
+  <!-- content 内容 -->
+  <div class="app-content ng-scope">
+    <div ui-butterbar="" class="butterbar hide"><span class="bar"></span></div>
+    <a href="http://tongji.cn.miaozhen.com/web/" class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside"></a>
+    <!-- uiView:  --><div class="app-content-body fade-in-up ng-scope" ui-view=""><!-- uiView:  --><div ui-view="" class="ng-scope"><!-- uiView:  --><div ui-view="" class="ng-scope"><style class="ng-scope">
+    .node rect {
+        cursor: move;
+        fill-opacity: .9;
+        shape-rendering: crispEdges;
+    }
+    .node text {
+        pointer-events: none;
+        text-shadow: 0 1px 0 #fff;
+    }
+    .link {
+        fill: none;
+        stroke: #000;
+        stroke-opacity: .2;
+    }
+    .link:hover {
+        stroke-opacity: .5;
+    }
+</style>
+<div class="wrapper-md ng-scope" ng-controller="BehavioralRouteCtrl">
+    <div class="panel panel-info">
+        <div class="panel-heading font-bold"><span translate="menu.advancedReport.advanceAnalysis.BehavioralRouteAnalysis" class="ng-scope">路径分析</span></div>
+        <div class="panel-body">
+            <div class="col-sm-12" id="chart" style="overflow-x: auto; overflow-y: hidden"><div class="m-l m-t" style="width:400px;position: absolute;left:0px"><b>起始页面</b><p>页面会话数: 3594 &nbsp;&nbsp; 退出数: 1156</p></div><div class="m-l m-t" style="width:400px;position: absolute;left:420px"><b>首次互动</b><p>页面会话数: 2438 &nbsp;&nbsp; 退出数: 354</p></div><div class="m-l m-t" style="width:400px;position: absolute;left:825px"><b>第二次互动</b><p>页面会话数: 2084 &nbsp;&nbsp; 退出数: 488</p></div><div class="m-l m-t" style="width:400px;position: absolute;left:1230px"><b>第三次互动</b><p>页面会话数: 1596 &nbsp;&nbsp; 退出数: 211</p></div><div class="m-l m-t" style="width:400px;position: absolute;left:1635px"><b>第四次互动</b><p>页面会话数: 1385 &nbsp;&nbsp; 退出数: 290</p></div><svg width="1800" height="700"><g transform="translate(10,70)"><g><path class="link" d="M150,136.07875307629206C278.75,136.07875307629206 278.75,350.4101722723544 407.5,350.4101722723544" style="stroke-width: 27.2518;"><title>首页-商城首页 → 首页-商城首页
+302</title></path><path class="link" d="M150,33.74897456931912C278.75,33.74897456931912 278.75,33.74897456931913 407.5,33.74897456931913" style="stroke-width: 67.4979;"><title>首页-商城首页 → 车型详情
+748</title></path><path class="link" d="M150,86.1771944216571C278.75,86.1771944216571 278.75,159.15504511895 407.5,159.15504511895" style="stroke-width: 37.3585;"><title>首页-商城首页 → 热销车型-查看全部
+414</title></path><path class="link" d="M150,201.27563576702218C278.75,201.27563576702218 278.75,563.1870385561936 407.5,563.1870385561936" style="stroke-width: 13.0845;"><title>首页-商城首页 → 二手车-官方认证二手车-官方认证二手车
+145</title></path><path class="link" d="M150,172.21903199343726C278.75,172.21903199343726 278.75,459.6185397867104 407.5,459.6185397867104" style="stroke-width: 45.0287;"><title>首页-商城首页 → others
+499</title></path><path class="link" d="M150,113.65463494667762C278.75,113.65463494667762 278.75,257.08367514356036 407.5,257.08367514356036" style="stroke-width: 17.5964;"><title>首页-商城首页 → BMW焕新计划
+195</title></path><path class="link" d="M150,352.7809680065628C278.75,352.7809680065628 278.75,365.0287120590648 407.5,365.0287120590648" style="stroke-width: 1.62428;"><title>车型详情 → 首页-商城首页
+18</title></path><path class="link" d="M150,351.78835110746513C278.75,351.78835110746513 278.75,266.60377358490564 407.5,266.60377358490564" style="stroke-width: 1;"><title>车型详情 → BMW焕新计划
+4</title></path><path class="link" d="M150,351.5176374077113C278.75,351.5176374077113 278.75,178.10500410172276 407.5,178.10500410172276" style="stroke-width: 1;"><title>车型详情 → 热销车型-查看全部
+2</title></path><path class="link" d="M150,350.1189499589828C278.75,350.1189499589828 278.75,68.80639868744875 407.5,68.80639868744875" style="stroke-width: 2.6169;"><title>车型详情 → 车型详情
+29</title></path><path class="link" d="M150,353.9089417555374C278.75,353.9089417555374 278.75,482.5389663658737 407.5,482.5389663658737" style="stroke-width: 1;"><title>车型详情 → others
+7</title></path><path class="link" d="M150,569.909762100082C278.75,569.909762100082 278.75,569.909762100082 407.5,569.909762100082" style="stroke-width: 1;"><title>二手车-官方认证二手车-车型详情 → 二手车-官方认证二手车-官方认证二手车
+2</title></path><path class="link" d="M150,498.6915504511895C278.75,498.6915504511895 278.75,366.87858900738314 407.5,366.87858900738314" style="stroke-width: 1;"><title>经销商-经销商 → 首页-商城首页
+5</title></path><path class="link" d="M150,499.3683347005742C278.75,499.3683347005742 278.75,486.19360131255127 407.5,486.19360131255127" style="stroke-width: 1;"><title>经销商-经销商 → others
+10</title></path><path class="link" d="M150,277.90812141099263C278.75,277.90812141099263 278.75,177.92452830188682 407.5,177.92452830188682" style="stroke-width: 1;"><title>BMW焕新计划 → 热销车型-查看全部
+2</title></path><path class="link" d="M150,278.2690730106645C278.75,278.2690730106645 278.75,266.1525840853159 407.5,266.1525840853159" style="stroke-width: 1;"><title>BMW焕新计划 → BMW焕新计划
+6</title></path><path class="link" d="M150,278.63002461033636C278.75,278.63002461033636 278.75,364.12633305988516 407.5,364.12633305988516" style="stroke-width: 1;"><title>BMW焕新计划 → 首页-商城首页
+2</title></path><path class="link" d="M150,278.7653814602133C278.75,278.7653814602133 278.75,482.1780147662018 407.5,482.1780147662018" style="stroke-width: 1;"><title>BMW焕新计划 → others
+1</title></path><path class="link" d="M150,424.40525020508613C278.75,424.40525020508613 278.75,70.29532403609518 407.5,70.29532403609518" style="stroke-width: 1;"><title>others → 车型详情
+4</title></path><path class="link" d="M150,426.9319114027892C278.75,426.9319114027892 278.75,484.298605414274 407.5,484.298605414274" style="stroke-width: 2.88761;"><title>others → others
+32</title></path><path class="link" d="M150,425.0820344544709C278.75,425.0820344544709 278.75,366.24692370795736 407.5,366.24692370795736" style="stroke-width: 1;"><title>others → 首页-商城首页
+9</title></path><path class="link" d="M150,424.63084495488107C278.75,424.63084495488107 278.75,178.2403609515997 407.5,178.2403609515997" style="stroke-width: 1;"><title>others → 热销车型-查看全部
+1</title></path><path class="link" d="M150,428.4208367514356C278.75,428.4208367514356 278.75,569.7744052502051 407.5,569.7744052502051" style="stroke-width: 1;"><title>others → 二手车-官方认证二手车-官方认证二手车
+1</title></path><path class="link" d="M557.5,56.71452009844136C686.25,56.71452009844136 686.25,381.2264150943396 815,381.2264150943396" style="stroke-width: 10.5578;"><title>车型详情 → others
+117</title></path><path class="link" d="M557.5,62.44462674323218C686.25,62.44462674323218 686.25,564.3150123051682 815,564.3150123051682" style="stroke-width: 1;"><title>车型详情 → 经销商-经销商
+10</title></path><path class="link" d="M557.5,51.390484003281394C686.25,51.390484003281394 686.25,298.1419196062346 815,298.1419196062346" style="stroke-width: 1;"><title>车型详情 → 热销车型-查看全部
+1</title></path><path class="link" d="M557.5,47.69073010664481C686.25,47.69073010664481 686.25,193.49056603773582 815,193.49056603773582" style="stroke-width: 7.30927;"><title>车型详情 → 车型详情
+81</title></path><path class="link" d="M557.5,22.01804757998361C686.25,22.01804757998361 686.25,53.96226415094335 815,53.96226415094335" style="stroke-width: 44.0361;"><title>车型详情 → 首页-商城首页
+488</title></path><path class="link" d="M557.5,176.7063166529943C686.25,176.7063166529943 686.25,386.82116488925345 815,386.82116488925345" style="stroke-width: 1;"><title>热销车型-查看全部 → others
+7</title></path><path class="link" d="M557.5,161.95242001640693C686.25,161.95242001640693 686.25,210.04922067268248 815,210.04922067268248" style="stroke-width: 25.808;"><title>热销车型-查看全部 → 车型详情
+286</title></path><path class="link" d="M557.5,144.7621000820345C686.25,144.7621000820345 686.25,80.26661197703031 815,80.26661197703031" style="stroke-width: 8.5726;"><title>热销车型-查看全部 → 首页-商城首页
+95</title></path><path class="link" d="M557.5,175.6234618539787C686.25,175.6234618539787 686.25,298.95406070549626 815,298.95406070549626" style="stroke-width: 1.53404;"><title>热销车型-查看全部 → 热销车型-查看全部
+17</title></path><path class="link" d="M557.5,352.39540607054965C686.25,352.39540607054965 686.25,488.63002461033636 815,488.63002461033636" style="stroke-width: 1.44381;"><title>首页-商城首页 → 我的-个人首页
+16</title></path><path class="link" d="M557.5,339.0853158326497C686.25,339.0853158326497 686.25,97.86300246103359 815,97.86300246103359" style="stroke-width: 4.60213;"><title>首页-商城首页 → 首页-商城首页
+51</title></path><path class="link" d="M557.5,347.0713699753897C686.25,347.0713699753897 686.25,304.59392945036916 815,304.59392945036916" style="stroke-width: 2.70714;"><title>首页-商城首页 → 热销车型-查看全部
+30</title></path><path class="link" d="M557.5,350.0492206726825C686.25,350.0492206726825 686.25,390.38556193601306 815,390.38556193601306" style="stroke-width: 3.24856;"><title>首页-商城首页 → others
+36</title></path><path class="link" d="M557.5,353.65873666940115C686.25,353.65873666940115 686.25,565.8490566037736 815,565.8490566037736" style="stroke-width: 1.08285;"><title>首页-商城首页 → 经销商-经销商
+12</title></path><path class="link" d="M557.5,343.552091878589C686.25,343.552091878589 686.25,225.4799015586546 815,225.4799015586546" style="stroke-width: 4.33142;"><title>首页-商城首页 → 车型详情
+48</title></path><path class="link" d="M557.5,259.47497949138636C686.25,259.47497949138636 686.25,223.1337161607875 815,223.1337161607875" style="stroke-width: 1;"><title>BMW焕新计划 → 车型详情
+4</title></path><path class="link" d="M557.5,265.0697292863003C686.25,265.0697292863003 686.25,565.0369155045119 815,565.0369155045119" style="stroke-width: 1;"><title>BMW焕新计划 → 经销商-经销商
+6</title></path><path class="link" d="M557.5,263.9868744872847C686.25,263.9868744872847 686.25,387.949138638228 815,387.949138638228" style="stroke-width: 1.62428;"><title>BMW焕新计划 → others
+18</title></path><path class="link" d="M557.5,261.41509433962267C686.25,261.41509433962267 686.25,301.4807219031993 815,301.4807219031993" style="stroke-width: 3.51928;"><title>BMW焕新计划 → 热销车型-查看全部
+39</title></path><path class="link" d="M557.5,253.78999179655457C686.25,253.78999179655457 686.25,90.05742411812956 815,90.05742411812956" style="stroke-width: 11.009;"><title>BMW焕新计划 → 首页-商城首页
+122</title></path><path class="link" d="M557.5,557.8178835110747C686.25,557.8178835110747 686.25,118.66283839212464 815,118.66283839212464" style="stroke-width: 2.34619;"><title>二手车-官方认证二手车-官方认证二手车 → 首页-商城首页
+26</title></path><path class="link" d="M557.5,564.3601312551272C686.25,564.3601312551272 686.25,412.5389663658736 815,412.5389663658736" style="stroke-width: 10.7383;"><title>二手车-官方认证二手车-官方认证二手车 → others
+119</title></path><path class="link" d="M557.5,476.35767022149304C686.25,476.35767022149304 686.25,568.1952420016406 815,568.1952420016406" style="stroke-width: 3.60952;"><title>others → 经销商-经销商
+40</title></path><path class="link" d="M557.5,472.2969647251846C686.25,472.2969647251846 686.25,491.60787530762923 815,491.60787530762923" style="stroke-width: 4.51189;"><title>others → 我的-个人首页
+50</title></path><path class="link" d="M557.5,445.7670221493027C686.25,445.7670221493027 686.25,108.8269073010664 815,108.8269073010664" style="stroke-width: 17.3257;"><title>others → 首页-商城首页
+192</title></path><path class="link" d="M557.5,462.46103363412635C686.25,462.46103363412635 686.25,399.58982772764557 815,399.58982772764557" style="stroke-width: 15.16;"><title>others → others
+168</title></path><path class="link" d="M557.5,454.6554552912223C686.25,454.6554552912223 686.25,227.87120590648067 815,227.87120590648067" style="stroke-width: 1;"><title>others → 车型详情
+5</title></path><path class="link" d="M965,57.70713699753892C1093.75,57.70713699753892 1093.75,188.7079573420836 1222.5,188.7079573420836" style="stroke-width: 8.21165;"><title>首页-商城首页 → 热销车型-查看全部
+91</title></path><path class="link" d="M965,85.00410172272349C1093.75,85.00410172272349 1093.75,565.1271534044298 1222.5,565.1271534044298" style="stroke-width: 1.98523;"><title>首页-商城首页 → 经销商-经销商
+22</title></path><path class="link" d="M965,42.77276456111562C1093.75,42.77276456111562 1093.75,86.80885972108277 1222.5,86.80885972108277" style="stroke-width: 21.6571;"><title>首页-商城首页 → 车型详情
+240</title></path><path class="link" d="M965,82.29696472518452C1093.75,82.29696472518452 1093.75,482.4938474159147 1222.5,482.4938474159147" style="stroke-width: 3.42904;"><title>首页-商城首页 → 二手车-官方认证二手车-官方认证二手车
+38</title></path><path class="link" d="M965,76.02543068088592C1093.75,76.02543068088592 1093.75,381.0459392945036 1222.5,381.0459392945036" style="stroke-width: 9.11403;"><title>首页-商城首页 → others
+101</title></path><path class="link" d="M965,66.6406890894175C1093.75,66.6406890894175 1093.75,284.78671041837566 1222.5,284.78671041837566" style="stroke-width: 9.65546;"><title>首页-商城首页 → 首页-商城首页
+107</title></path><path class="link" d="M965,202.83018867924525C1093.75,202.83018867924525 1093.75,200.39376538146016 1222.5,200.39376538146016" style="stroke-width: 15.16;"><title>车型详情 → 热销车型-查看全部
+168</title></path><path class="link" d="M965,223.67514356029528C1093.75,223.67514356029528 1093.75,566.2100082034455 1222.5,566.2100082034455" style="stroke-width: 1;"><title>车型详情 → 经销商-经销商
+2</title></path><path class="link" d="M965,192.54306808859715C1093.75,192.54306808859715 1093.75,100.3445447087776 1222.5,100.3445447087776" style="stroke-width: 5.41427;"><title>车型详情 → 车型详情
+60</title></path><path class="link" d="M965,221.14848236259223C1093.75,221.14848236259223 1093.75,388.039376538146 1222.5,388.039376538146" style="stroke-width: 4.87285;"><title>车型详情 → others
+54</title></path><path class="link" d="M965,214.56111566858075C1093.75,214.56111566858075 1093.75,293.76538146021323 1222.5,293.76538146021323" style="stroke-width: 8.30189;"><title>车型详情 → 首页-商城首页
+92</title></path><path class="link" d="M965,304.59392945036916C1093.75,304.59392945036916 1093.75,298.9089417555373 1222.5,298.9089417555373" style="stroke-width: 1.98523;"><title>热销车型-查看全部 → 首页-商城首页
+22</title></path><path class="link" d="M965,303.1952420016407C1093.75,303.1952420016407 1093.75,208.3798195242001 1222.5,208.3798195242001" style="stroke-width: 1;"><title>热销车型-查看全部 → 热销车型-查看全部
+9</title></path><path class="link" d="M965,300.4429860541427C1093.75,300.4429860541427 1093.75,105.39786710418367 1222.5,105.39786710418367" style="stroke-width: 4.69237;"><title>热销车型-查看全部 → 车型详情
+52</title></path><path class="link" d="M965,564.721082854799C1093.75,564.721082854799 1093.75,305.90237899917963 1222.5,305.90237899917963" style="stroke-width: 1.17309;"><title>经销商-经销商 → 首页-商城首页
+13</title></path><path class="link" d="M965,565.9844134536505C1093.75,565.9844134536505 1093.75,410.10254306808855 1222.5,410.10254306808855" style="stroke-width: 1.35357;"><title>经销商-经销商 → others
+15</title></path><path class="link" d="M965,567.518457752256C1093.75,567.518457752256 1093.75,569.1427399507794 1222.5,569.1427399507794" style="stroke-width: 1.71452;"><title>经销商-经销商 → 经销商-经销商
+19</title></path><path class="link" d="M965,563.9991796554554C1093.75,563.9991796554554 1093.75,114.4667760459392 1222.5,114.4667760459392" style="stroke-width: 1;"><title>经销商-经销商 → 车型详情
+3</title></path><path class="link" d="M965,490.3896636587367C1093.75,490.3896636587367 1093.75,408.6587366694011 1222.5,408.6587366694011" style="stroke-width: 1.53404;"><title>我的-个人首页 → others
+17</title></path><path class="link" d="M965,491.56275635767025C1093.75,491.56275635767025 1093.75,567.8794093519277 1222.5,567.8794093519277" style="stroke-width: 1;"><title>我的-个人首页 → 经销商-经销商
+9</title></path><path class="link" d="M965,488.7653814602133C1093.75,488.7653814602133 1093.75,304.4585726004921 1222.5,304.4585726004921" style="stroke-width: 1.71452;"><title>我的-个人首页 → 首页-商城首页
+19</title></path><path class="link" d="M965,385.55783429040196C1093.75,385.55783429040196 1093.75,301.75143560295317 1222.5,301.75143560295317" style="stroke-width: 3.69975;"><title>others → 首页-商城首页
+41</title></path><path class="link" d="M965,409.78671041837566C1093.75,409.78671041837566 1093.75,489.1714520098441 1222.5,489.1714520098441" style="stroke-width: 9.92617;"><title>others → 二手车-官方认证二手车-官方认证二手车
+110</title></path><path class="link" d="M965,379.24118129614436C1093.75,379.24118129614436 1093.75,111.03773584905652 1222.5,111.03773584905652" style="stroke-width: 6.58737;"><title>others → 车型详情
+73</title></path><path class="link" d="M965,415.3363412633306C1093.75,415.3363412633306 1093.75,566.8867924528302 1222.5,566.8867924528302" style="stroke-width: 1.17309;"><title>others → 经销商-经销商
+13</title></path><path class="link" d="M965,383.1214109926169C1093.75,383.1214109926169 1093.75,209.3724364232977 1222.5,209.3724364232977" style="stroke-width: 1.17309;"><title>others → 热销车型-查看全部
+13</title></path><path class="link" d="M965,396.1156685808039C1093.75,396.1156685808039 1093.75,399.1837571780147 1222.5,399.1837571780147" style="stroke-width: 17.4159;"><title>others → others
+193</title></path><path class="link" d="M1372.5,89.69647251845765C1501.25,89.69647251845765 1501.25,201.83757178014764 1630,201.83757178014764" style="stroke-width: 18.0476;"><title>车型详情 → 首页-商城首页
+200</title></path><path class="link" d="M1372.5,106.30024610336332C1501.25,106.30024610336332 1501.25,388.31009023789994 1630,388.31009023789994" style="stroke-width: 8.12141;"><title>车型详情 → others
+90</title></path><path class="link" d="M1372.5,100.47990155865455C1501.25,100.47990155865455 1501.25,307.8876127973749 1630,307.8876127973749" style="stroke-width: 3.51928;"><title>车型详情 → 热销车型-查看全部
+39</title></path><path class="link" d="M1372.5,78.326497128794C1501.25,78.326497128794 1501.25,97.36669401148477 1630,97.36669401148477" style="stroke-width: 4.69237;"><title>车型详情 → 车型详情
+52</title></path><path class="link" d="M1372.5,294.66776045939287C1501.25,294.66776045939287 1501.25,395.3486464315012 1630,395.3486464315012" style="stroke-width: 5.41427;"><title>首页-商城首页 → others
+60</title></path><path class="link" d="M1372.5,290.51681706316646C1501.25,290.51681706316646 1501.25,311.9031993437244 1630,311.9031993437244" style="stroke-width: 2.88761;"><title>首页-商城首页 → 热销车型-查看全部
+32</title></path><path class="link" d="M1372.5,297.73584905660374C1501.25,297.73584905660374 1501.25,490.4347826086957 1630,490.4347826086957" style="stroke-width: 1;"><title>首页-商城首页 → 二手车-官方认证二手车-官方认证二手车
+8</title></path><path class="link" d="M1372.5,282.6210008203445C1501.25,282.6210008203445 1501.25,116.54224774405245 1630,116.54224774405245" style="stroke-width: 5.32404;"><title>首页-商城首页 → 车型详情
+59</title></path><path class="link" d="M1372.5,287.1780147662017C1501.25,287.1780147662017 1501.25,221.23872026251024 1630,221.23872026251024" style="stroke-width: 3.78999;"><title>首页-商城首页 → 首页-商城首页
+42</title></path><path class="link" d="M1372.5,191.68580803937647C1501.25,191.68580803937647 1501.25,106.79655455291217 1630,106.79655455291217" style="stroke-width: 14.1674;"><title>热销车型-查看全部 → 车型详情
+157</title></path><path class="link" d="M1372.5,207.65791632485636C1501.25,207.65791632485636 1501.25,310.05332239540604 1630,310.05332239540604" style="stroke-width: 1;"><title>热销车型-查看全部 → 热销车型-查看全部
+9</title></path><path class="link" d="M1372.5,203.01066447908116C1501.25,203.01066447908116 1501.25,215.10254306808858 1630,215.10254306808858" style="stroke-width: 8.48236;"><title>热销车型-查看全部 → 首页-商城首页
+94</title></path><path class="link" d="M1372.5,208.19934372436418C1501.25,208.19934372436418 1501.25,392.5061525840853 1630,392.5061525840853" style="stroke-width: 1;"><title>热销车型-查看全部 → others
+3</title></path><path class="link" d="M1372.5,482.22313371616076C1501.25,482.22313371616076 1501.25,233.33059885151764 1630,233.33059885151764" style="stroke-width: 2.88761;"><title>二手车-官方认证二手车-官方认证二手车 → 首页-商城首页
+32</title></path><path class="link" d="M1372.5,485.65217391304344C1501.25,485.65217391304344 1501.25,415.3814602132896 1630,415.3814602132896" style="stroke-width: 3.97047;"><title>二手车-官方认证二手车-官方认证二手车 → others
+44</title></path><path class="link" d="M1372.5,491.06644790812135C1501.25,491.06644790812135 1501.25,567.3831009023789 1630,567.3831009023789" style="stroke-width: 5.2338;"><title>二手车-官方认证二手车-官方认证二手车 → 二手车-官方认证二手车-车型详情
+58</title></path><path class="link" d="M1372.5,488.0434782608695C1501.25,488.0434782608695 1501.25,494.17965545529125 1630,494.17965545529125" style="stroke-width: 1;"><title>二手车-官方认证二手车-官方认证二手车 → 二手车-官方认证二手车-官方认证二手车
+9</title></path><path class="link" d="M1372.5,567.0221493027071C1501.25,567.0221493027071 1501.25,418.7202625102543 1630,418.7202625102543" style="stroke-width: 2.70714;"><title>经销商-经销商 → others
+30</title></path><path class="link" d="M1372.5,564.9917965545528C1501.25,564.9917965545528 1501.25,235.45118949958982 1630,235.45118949958982" style="stroke-width: 1.35357;"><title>经销商-经销商 → 首页-商城首页
+15</title></path><path class="link" d="M1372.5,564.2247744052502C1501.25,564.2247744052502 1501.25,122.7235438884331 1630,122.7235438884331" style="stroke-width: 1;"><title>经销商-经销商 → 车型详情
+2</title></path><path class="link" d="M1372.5,389.12223133716157C1501.25,389.12223133716157 1501.25,313.7981952420016 1630,313.7981952420016" style="stroke-width: 1;"><title>others → 热销车型-查看全部
+10</title></path><path class="link" d="M1372.5,378.20344544708774C1501.25,378.20344544708774 1501.25,120.91878589007378 1630,120.91878589007378" style="stroke-width: 3.42904;"><title>others → 车型详情
+38</title></path><path class="link" d="M1372.5,406.40278917145196C1501.25,406.40278917145196 1501.25,492.284659557014 1630,492.284659557014" style="stroke-width: 2.97785;"><title>others → 二手车-官方认证二手车-官方认证二手车
+33</title></path><path class="link" d="M1372.5,384.2945036915504C1501.25,384.2945036915504 1501.25,227.51025430680883 1630,227.51025430680883" style="stroke-width: 8.75308;"><title>others → 首页-商城首页
+97</title></path><path class="link" d="M1372.5,397.2436423297785C1501.25,397.2436423297785 1501.25,405.7260049220673 1630,405.7260049220673" style="stroke-width: 15.3404;"><title>others → others
+170</title></path><path class="link" d="M1372.5,407.98195242001634C1501.25,407.98195242001634 1501.25,564.67596390484 1630,564.67596390484" style="stroke-width: 1;"><title>others → 二手车-官方认证二手车-车型详情
+2</title></path></g><g><g class="node" transform="translate(0,277.8178835110747)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>BMW焕新计划
+页面会话数:21
+退出数:10</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>BMW焕新计划</tspan><tspan x="6" dy="20">页面会话数:21</tspan><tspan x="6" dy="20">退出数:10</tspan></text></g><g class="node" transform="translate(407.5,248.2854799015587)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>BMW焕新计划
+页面会话数:205
+退出数:16</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>BMW焕新计划</tspan><tspan x="6" dy="20">页面会话数:205</tspan><tspan x="6" dy="20">退出数:16</tspan></text></g><g class="node" transform="translate(407.5,556.6447908121411)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>二手车-官方认证二手车-官方认证二手车
+页面会话数:148
+退出数:3</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>二手车-官方认证二手车-官方认证二手车</tspan><tspan x="6" dy="20">页面会话数:148</tspan><tspan x="6" dy="20">退出数:3</tspan></text></g><g class="node" transform="translate(1222.5,480.7793273174733)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>二手车-官方认证二手车-官方认证二手车
+页面会话数:148
+退出数:5</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>二手车-官方认证二手车-官方认证二手车</tspan><tspan x="6" dy="20">页面会话数:148</tspan><tspan x="6" dy="20">退出数:5</tspan></text></g><g class="node" transform="translate(1630,490.0738310090238)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>二手车-官方认证二手车-官方认证二手车
+页面会话数:50
+退出数:5</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>二手车-官方认证二手车-官方认证二手车</tspan><tspan x="6" dy="20">页面会话数:50</tspan><tspan x="6" dy="20">退出数:5</tspan></text></g><g class="node" transform="translate(0,569.8195242001641)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>二手车-官方认证二手车-车型详情
+页面会话数:50
+退出数:48</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>二手车-官方认证二手车-车型详情</tspan><tspan x="6" dy="20">页面会话数:50</tspan><tspan x="6" dy="20">退出数:48</tspan></text></g><g class="node" transform="translate(1630,564.5857260049221)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>二手车-官方认证二手车-车型详情
+页面会话数:60
+退出数:1</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>二手车-官方认证二手车-车型详情</tspan><tspan x="6" dy="20">页面会话数:60</tspan><tspan x="6" dy="20">退出数:1</tspan></text></g><g class="node" transform="translate(407.5,140.47579983593113)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>热销车型-查看全部
+页面会话数:419
+退出数:14</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>热销车型-查看全部</tspan><tspan x="6" dy="20">页面会话数:419</tspan><tspan x="6" dy="20">退出数:14</tspan></text></g><g class="node" transform="translate(815,298.0968006562756)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>热销车型-查看全部
+页面会话数:87
+退出数:4</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>热销车型-查看全部</tspan><tspan x="6" dy="20">页面会话数:87</tspan><tspan x="6" dy="20">退出数:4</tspan></text></g><g class="node" transform="translate(1222.5,184.60213289581617)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>热销车型-查看全部
+页面会话数:281
+退出数:18</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>热销车型-查看全部</tspan><tspan x="6" dy="20">页面会话数:281</tspan><tspan x="6" dy="20">退出数:18</tspan></text></g><g class="node" transform="translate(1630,306.12797374897457)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>热销车型-查看全部
+页面会话数:90
+退出数:9</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>热销车型-查看全部</tspan><tspan x="6" dy="20">页面会话数:90</tspan><tspan x="6" dy="20">退出数:9</tspan></text></g><g class="node" transform="translate(0,348.8105004101723)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>车型详情
+页面会话数:124
+退出数:64</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>车型详情</tspan><tspan x="6" dy="20">页面会话数:124</tspan><tspan x="6" dy="20">退出数:64</tspan></text></g><g class="node" transform="translate(407.5,1.4210854715202004e-14)"><rect height="70.4757998359311" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>车型详情
+页面会话数:781
+退出数:84</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>车型详情</tspan><tspan x="6" dy="20">页面会话数:781</tspan><tspan x="6" dy="20">退出数:84</tspan></text></g><g class="node" transform="translate(815,189.8359310910582)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>车型详情
+页面会话数:424
+退出数:48</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>车型详情</tspan><tspan x="6" dy="20">页面会话数:424</tspan><tspan x="6" dy="20">退出数:48</tspan></text></g><g class="node" transform="translate(1222.5,75.9803117309269)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>车型详情
+页面会话数:428
+退出数:47</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>车型详情</tspan><tspan x="6" dy="20">页面会话数:428</tspan><tspan x="6" dy="20">退出数:47</tspan></text></g><g class="node" transform="translate(1630,95.02050861361766)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>车型详情
+页面会话数:308
+退出数:26</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>车型详情</tspan><tspan x="6" dy="20">页面会话数:308</tspan><tspan x="6" dy="20">退出数:26</tspan></text></g><g class="node" transform="translate(0,498.4659557013946)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>经销商-经销商
+页面会话数:35
+退出数:20</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>经销商-经销商</tspan><tspan x="6" dy="20">页面会话数:35</tspan><tspan x="6" dy="20">退出数:20</tspan></text></g><g class="node" transform="translate(815,563.8638228055784)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>经销商-经销商
+页面会话数:68
+退出数:18</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>经销商-经销商</tspan><tspan x="6" dy="20">页面会话数:68</tspan><tspan x="6" dy="20">退出数:18</tspan></text></g><g class="node" transform="translate(1222.5,564.1345365053322)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>经销商-经销商
+页面会话数:65
+退出数:18</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>经销商-经销商</tspan><tspan x="6" dy="20">页面会话数:65</tspan><tspan x="6" dy="20">退出数:18</tspan></text></g><g class="node" transform="translate(0,0)"><rect height="207.81788351107465" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>111页面会话数:3,264
+退出数:961</title></rect><text x="6" y="80.90894175553733" dy=".35em" text-anchor="start"><tspan>首页-商城首页</tspan><tspan x="6" dy="20">页面会话数:3,264</tspan><tspan x="6" dy="20">退出数:961</tspan></text></g><g class="node" transform="translate(407.5,336.7842493847416)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>首页-商城首页
+页面会话数:336
+退出数:143</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>首页-商城首页</tspan><tspan x="6" dy="20">页面会话数:336</tspan><tspan x="6" dy="20">退出数:143</tspan></text></g><g class="node" transform="translate(815,31.944216570959753)"><rect height="87.89171452009845" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>首页-商城首页
+页面会话数:974
+退出数:375</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>首页-商城首页</tspan><tspan x="6" dy="20">页面会话数:974</tspan><tspan x="6" dy="20">退出数:375</tspan></text></g><g class="node" transform="translate(1222.5,279.9589827727645)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>首页-商城首页
+页面会话数:294
+退出数:93</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>首页-商城首页</tspan><tspan x="6" dy="20">页面会话数:294</tspan><tspan x="6" dy="20">退出数:93</tspan></text></g><g class="node" transform="translate(1630,192.8137817883511)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>首页-商城首页
+页面会话数:480
+退出数:219</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>首页-商城首页</tspan><tspan x="6" dy="20">页面会话数:480</tspan><tspan x="6" dy="20">退出数:219</tspan></text></g><g class="node" transform="translate(815,487.90812141099263)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>我的-个人首页
+页面会话数:66
+退出数:21</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>我的-个人首页</tspan><tspan x="6" dy="20">页面会话数:66</tspan><tspan x="6" dy="20">退出数:21</tspan></text></g><g class="node" transform="translate(0,424.22477440525023)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>others
+页面会话数:100
+退出数:53</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>others</tspan><tspan x="6" dy="20">页面会话数:100</tspan><tspan x="6" dy="20">退出数:53</tspan></text></g><g class="node" transform="translate(407.5,437.104183757178)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>others
+页面会话数:549
+退出数:94</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>others</tspan><tspan x="6" dy="20">页面会话数:549</tspan><tspan x="6" dy="20">退出数:94</tspan></text></g><g class="node" transform="translate(815,375.9474979491386)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>others
+页面会话数:465
+退出数:22</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>others</tspan><tspan x="6" dy="20">页面会话数:465</tspan><tspan x="6" dy="20">退出数:22</tspan></text></g><g class="node" transform="translate(1222.5,376.4889253486464)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>others
+页面会话数:380
+退出数:30</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>others</tspan><tspan x="6" dy="20">页面会话数:380</tspan><tspan x="6" dy="20">退出数:30</tspan></text></g><g class="node" transform="translate(1630,384.2493847415915)"><rect height="60" width="150" style="fill: rgb(203, 213, 255); stroke: rgb(163, 180, 255);"><title>others
+页面会话数:397
+退出数:30</title></rect><text x="6" y="6" dy=".35em" text-anchor="start"><tspan>others</tspan><tspan x="6" dy="20">页面会话数:397</tspan><tspan x="6" dy="20">退出数:30</tspan></text></g></g></g></svg></div>
+        </div>
+    </div>
+</div>
+<script class="ng-scope">
+    function formatter(value){
+        var result = [ ], counter = 0;
+        var num_array = value.toFixed(2).split('.');
+        var num = num_array[0];
+        var newstr = '';
+        for (var i = num.length - 1; i >= 0; i--) {
+            counter++;
+            result.unshift(num[i]);
+            if (!(counter % 3) && i != 0) { result.unshift(','); }
+        }
+        return  result.join('') ;
+    }
+    var maxWidth = 1800;
+    var maxHeight = 700;
+    var nodePadding = 70;
+    var nodeWidth = 150;
+    var nodeMinHeight= 60;
+    var minHeight= 50;
+    var units = "Widgets";
+    var margin = {top: 70, right: 10, bottom: 30, left: 10},
+            width = maxWidth - margin.left - margin.right,
+            height = maxHeight - margin.top - margin.bottom - 30;
+
+    var formatNumber = d3.format(",.0f"),    // zero decimal places
+            format = function(d) { return formatNumber(d) + " " + units; },
+            color = d3.scale.category20();
+    var reset= function (data, translate) {
+        var div = ["<div class='m-l m-t' style='width:400px;position: absolute;left:", 0,"px'>",
+        "<b>", 'title' ,"</b>",
+        "<p>", translate.PageSession ,": ", 'pageviewCount'," &nbsp;&nbsp; ", translate.Exits ,": ", 'exitsCount',
+        "</p>",
+        "</div>"]
+        for (var i  = 0; i < 5; i++) {
+            div[1] = 400 * i + (i?20 + (i - 1) * 5:0);
+            div[4] = translate["Title"+i];
+            div[9] = data.Metrics[i].pageviews;
+            div[13] = data.Metrics[i].exits;
+            $("#chart").append(div.join(""));
+        }
+    }
+    var redraw = function (data, translate) {
+        if (!data || !data.Linkes || data.Linkes.length == 0) {
+            $("#chart").html("<div class='col-sm-12 text-center ' style='height: 400px;'><h4>"+translate.NoData+"</h4></div>");
+            return;
+        }
+        // append the svg canvas to the page
+        $("#chart").html("");
+        reset(data, translate);
+        var svg = d3.select("#chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom + 30)
+        .append("g")
+        .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+    
+        // Set the sankey diagram properties
+        var sankey = d3.sankey()
+        .nodeWidth(nodeWidth)
+        .nodePadding(nodePadding)
+        .size([width, height]);
+    
+        var path = sankey.link();
+    
+        // load the data (using the timelyportfolio csv method)
+    
+        var getDataNode = function(data){
+            var nodes = data.Nodes;
+            var linkes = data.Linkes;
+            var result = {};
+            result.kv = [];
+            result.links = [];
+            result.nodes = [];
+            var num =  0;
+            for(var key in nodes) {
+                var __nameArr = key.split("_");
+                var __level = __nameArr[ __nameArr.length - 1 ];
+                result.nodes[num] = {
+                    name: key,
+                    pageviews:  __level == 0 ? nodes[key].exits : 0,
+                    level: __level,
+                    exits: nodes[key].exits
+                }
+                result.kv[key] = num++;
+            }
+            for(var i = 0; i < linkes.length ; i++) {
+                var __node = result.nodes[result.kv[linkes[i].source]];
+                if (__node && __node.level == 0) {
+                    result.nodes[result.kv[linkes[i].source]].pageviews += linkes[i].pageviews + linkes[i].exits;
+                }
+                var __index = result.kv[linkes[i].target];
+                if (__index != undefined) {
+                    result.nodes[result.kv[linkes[i].target]].pageviews += linkes[i].pageviews;
+                }
+                if (!result.kv[linkes[i].target] && result.kv[linkes[i].target] != 0) {
+                    continue;
+                }
+                result.links[i] = {
+                    source: linkes[i].source,
+                    target: linkes[i].target,
+                    value : linkes[i].pageviews
+                }
+            }
+            
+            var delArr = [];
+            for(var i = 0 ; i< num; i++){
+                if (result.nodes[i].pageviews == 0) {
+                    delArr.push(i);
+                }
+            }
+            /*for (var i in delArr) {
+             result.nodes.splice(i, 1);
+             }*/
+            return result;
+        }
+        data = getDataNode(data);
+        
+        //set up graph in same style as original example but empty
+        graph = {"nodes" : data.nodes, "links" : data.links};
+    
+        // return only the distinct / unique nodes
+        graph.nodes = d3.keys(d3.nest()
+        .key(function (d) { return d.name; })
+        .map(graph.nodes));
+    
+        // loop through each link replacing the text with its index from node
+        graph.links.forEach(function (d, i) {
+            graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+            graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+        });
+    
+        //now loop through each nodes to make nodes an array of objects
+        // rather than an array of strings
+        data.nodes.forEach(function (d, i) {
+            graph.nodes[i] = {
+                name: d.name,
+                pageviews: d.pageviews,
+                exits: d.exits
+            };
+        });
+    
+        sankey
+        .nodes(graph.nodes)
+        .links(graph.links)
+        .layout(32);
+// add in the links
+        var link = svg.append("g").selectAll(".link")
+        .data(graph.links)
+        .enter().append("path")
+        .attr("class", "link")
+        .attr("d", path)
+        .style("stroke-width", function(d) { return Math.max(1, d.dy); });
+
+// add the link titles
+        link.append("title")
+        .text(function(d) {
+            return (d.source.name.substr(0, d.source.name.length - 2)) + " → " +
+                    (d.target.name.substr(0, d.target.name.length - 2)) + "\n" + d.value; });
+
+// add in the nodes
+        var node = svg.append("g").selectAll(".node")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("class", "node")
+        .attr("transform", function(d) {
+            return "translate(" + d.x + "," + d.y + ")"; })
+        .call(d3.behavior.drag()
+        .origin(function(d) { return d; }));
+
+// add the rectangles for the nodes
+        node.append("rect")
+        .attr("height", function(d) { return d.dy < nodeMinHeight ? nodeMinHeight : d.dy; })
+        .attr("width", sankey.nodeWidth())
+        .style("fill", '#cbd5ff')
+        .style("stroke", '#a3b4ff')
+        .append("title")
+        .text(function(d) {
+            return (d.name.substr(0, d.name.length - 2)) + "\n" + translate.PageSession  +":" + formatter(d.pageviews) + "\n" + translate.Exits + ":" + formatter(d.exits);
+        });
+
+// add in the title for the nodes
+        var text = node.append("text")
+        .attr("x", 6)
+        .attr("y", function(d) { return d.dy / 2  < nodeMinHeight ? 6 : d.dy / 2 - 23;})
+        /* .attr("dy", ".35em")*/
+        .attr("dy", ".35em")
+        .attr("transform", null)
+        /*.filter(function(d) { return d.x < width / 2; })*/
+        .attr("text-anchor", "start");
+        text.append("tspan")
+        .text(function(d) {
+            return d.name.substr(0, d.name.length - 2);
+        });
+        text.append("tspan")
+        .attr('x', 6)
+        .attr('dy', 20)
+        .text(function(d) {
+            return translate.PageSession  +":" + formatter(d.pageviews);
+        });
+        text.append("tspan")
+        .attr('x', 6)
+        .attr('dy', 20)
+        .text(function(d) {
+            return translate.Exits + ":" + formatter(d.exits);
+        });
+    }
+</script></div></div></div>
+  </div>
+  <!-- /content 内容 -->
+
+  <!-- footer -->
+  <div class="app-footer wrapper b-t bg-light ng-binding ng-scope">
+    © 2007 - 2018 SiteMonitor Copyright.
+  </div>
+  <!-- 右侧滚动区域（后退、置顶功能） begin add by langxf 20170228 PM -->
+  <div id="scrollBox" class="scroll ng-scope">
+    <ul>
+      <!--<li id="historyForward" onclick="history.forward();"><a class="btn btn-warning">前进</a></li>-->
+      <li id="historyBack" ng-click="goBack();"><a class="btn btn-sm btn-success"><i class="fa fa-mail-reply"></i></a></li>
+      <li id="goTop" ng-click="goTop(200);" style="display: list-item;"><a class="btn btn-sm btn-info"><i class="fa fa-arrow-up"></i></a></li>
+    </ul>
+  </div>
+  <!-- 右侧滚动区域（后退、置顶功能）end -->
+  <!-- / footer -->
+
+  <!-- ngInclude: 'tpl/blocks/settings.html' --><div data-ng-include=" &#39;tpl/blocks/settings.html&#39; " class="settings panel panel-info panel-blue ng-scope" style=""><!-- settings -->
+  <button class="btn btn-info no-shadow pos-abt settings-btn ng-scope" ui-toggle-class="active" target=".settings" id="settingBtn">
+    <i class="fa fa-spin fa-gear"></i>
+  </button>
+  <div class="panel-heading ng-scope" translate="sidebar.Setting">界面设置</div>
+  <div class="panel-body ng-scope"> 
+    <div class="m-b-sm">
+      <label class="i-switch bg-info pull-right">
+        <input type="checkbox" ng-model="app.settings.headerFixed" class="ng-pristine ng-untouched ng-valid">
+        <i></i>
+      </label>
+      固定顶部
+    </div>
+    <div class="m-b-sm">
+      <label class="i-switch bg-info pull-right">
+        <input type="checkbox" ng-model="app.settings.asideFixed" class="ng-pristine ng-untouched ng-valid">
+        <i></i>
+      </label>
+      菜单不滚动
+    </div>
+    <div class="m-b-sm">
+      <label class="i-switch bg-info pull-right">
+        <input type="checkbox" ng-model="app.settings.asideFolded" class="ng-pristine ng-untouched ng-valid">
+        <i></i>
+      </label>
+      折叠菜单
+    </div>
+    <div class="m-b-sm">
+      <label class="i-switch bg-info pull-right">
+        <input type="checkbox" ng-model="app.settings.asideDock" class="ng-pristine ng-untouched ng-valid">
+        <i></i>
+      </label>
+      顶部菜单
+    </div>
+    <div ng-hide="true" class="ng-hide">
+      <label class="i-switch bg-info pull-right">
+        <input type="checkbox" ng-model="app.settings.container" class="ng-pristine ng-untouched ng-valid">
+        <i></i>
+      </label>
+      切换布局
+    </div>
+  </div>
+  <div class="wrapper b-t b-light bg-light lter r-b ng-scope">
+    <div class="row row-sm">
+      <div class="col-xs-6">
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-black&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-white-only&#39;; 
+          app.settings.asideColor=&#39;bg-black&#39;;
+         ">
+          <input type="radio" name="a" ng-model="app.settings.themeID" value="1" class="ng-pristine ng-untouched ng-valid">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-black header"></b>
+            <b class="bg-white header"></b>
+            <b class="bg-black"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-dark&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-white-only&#39;; 
+          app.settings.asideColor=&#39;bg-dark&#39;;
+         ">
+          <input type="radio" name="a" ng-model="app.settings.themeID" value="13" class="ng-pristine ng-untouched ng-valid">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-dark header"></b>
+            <b class="bg-white header"></b>
+            <b class="bg-dark"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-white-only&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-white-only&#39;; 
+          app.settings.asideColor=&#39;bg-black&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="2" class="ng-pristine ng-untouched ng-valid" name="17">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-white header"></b>
+            <b class="bg-white header"></b>
+            <b class="bg-black"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-primary&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-white-only&#39;; 
+          app.settings.asideColor=&#39;bg-dark&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="3" class="ng-pristine ng-untouched ng-valid" name="18">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-primary header"></b>
+            <b class="bg-white header"></b>
+            <b class="bg-dark"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-info&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-white-only&#39;; 
+          app.settings.asideColor=&#39;bg-black&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="4" class="ng-pristine ng-untouched ng-valid" name="19">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-info header"></b>
+            <b class="bg-white header"></b>
+            <b class="bg-black"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-success&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-white-only&#39;; 
+          app.settings.asideColor=&#39;bg-dark&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="5" class="ng-pristine ng-untouched ng-valid" name="20">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-success header"></b>
+            <b class="bg-white header"></b>
+            <b class="bg-dark"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-danger&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-white-only&#39;; 
+          app.settings.asideColor=&#39;bg-dark&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="6" class="ng-pristine ng-untouched ng-valid" name="21">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-danger header"></b>
+            <b class="bg-white header"></b>
+            <b class="bg-dark"></b>
+          </span>
+        </label>
+      </div>
+      <div class="col-xs-6">
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-black&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-black&#39;; 
+          app.settings.asideColor=&#39;bg-white b-r&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="7" class="ng-pristine ng-untouched ng-valid" name="22">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-black header"></b>
+            <b class="bg-black header"></b>
+            <b class="bg-white"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-dark&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-dark&#39;; 
+          app.settings.asideColor=&#39;bg-light&#39;;
+         ">
+          <input type="radio" name="a" ng-model="app.settings.themeID" value="14" class="ng-pristine ng-untouched ng-valid">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-dark header"></b>
+            <b class="bg-dark header"></b>
+            <b class="bg-light"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-info dker&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-info dker&#39;; 
+          app.settings.asideColor=&#39;bg-light dker b-r&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="8" class="ng-pristine ng-untouched ng-valid" name="23">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-info dker header"></b>
+            <b class="bg-info dker header"></b>
+            <b class="bg-light dker"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-primary&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-primary&#39;; 
+          app.settings.asideColor=&#39;bg-dark&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="9" class="ng-pristine ng-untouched ng-valid" name="24">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-primary header"></b>
+            <b class="bg-primary header"></b>
+            <b class="bg-dark"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-info dker&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-info dk&#39;; 
+          app.settings.asideColor=&#39;bg-black&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="10" class="ng-pristine ng-untouched ng-valid" name="25">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-info dker header"></b>
+            <b class="bg-info dk header"></b>
+            <b class="bg-black"></b>
+          </span>
+        </label>
+
+        <label class="i-checks block m-b" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-success&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-success&#39;;
+          app.settings.asideColor=&#39;bg-dark&#39;;
+          ">
+          <input type="radio" ng-model="app.settings.themeID" value="11" class="ng-pristine ng-untouched ng-valid" name="26">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-success header"></b>
+            <b class="bg-success header"></b>
+            <b class="bg-dark"></b>
+          </span>
+        </label>
+        
+        <label class="i-checks block" ng-click="
+          app.settings.navbarHeaderColor=&#39;bg-danger dker bg-gd&#39;; 
+          app.settings.navbarCollapseColor=&#39;bg-danger dker bg-gd&#39;; 
+          app.settings.asideColor=&#39;bg-dark&#39;;
+         ">
+          <input type="radio" ng-model="app.settings.themeID" value="12" class="ng-pristine ng-untouched ng-valid" name="27">
+          <span class="block bg-light clearfix pos-rlt">
+            <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+              <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+            </span>
+            <b class="bg-danger dker header"></b>
+            <b class="bg-danger dker header"></b>
+            <b class="bg-dark"></b>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+<!-- /settings --></div></div>
+
+<div id="toast-container" ng-class="config.position" toaster-options="{&#39;position-class&#39;: &#39;toast-top-right&#39;, &#39;close-button&#39;:true}" class="ng-scope toast-top-right"><!-- ngRepeat: toaster in toasters --></div>
+
+<!-- util -->
+<script async="" src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/clicki.min.js.下载"></script><script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Const.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/util.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Conf.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ReportConf.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/DefaultReport.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/TimedTaskUtil.js.下载"></script>
+
+<!-- jQuery -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/jquery.min.js.下载"></script>
+
+<!-- Angular -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular.js.下载"></script>
+
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/moment.min.js.下载"></script>
+<!--clipboard-->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/clipboard.min.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-animate.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-cookies.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-resource.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-sanitize.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-touch.js.下载"></script>
+<!-- Vendor -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-ui-router.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ngStorage.js.下载"></script>
+
+<!-- bootstrap -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-bootstrap-tpls.js.下载"></script>
+<!-- lazyload -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ocLazyLoad.js.下载"></script>
+<!-- translate -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-translate.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/loader-static-files.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/storage-cookie.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/storage-local.js.下载"></script>
+
+<!-- Angular Datatables -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/jquery.dataTables.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/dataTables.bootstrap.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-datatables.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/dataTables.fixedColumns.js.下载"></script>
+
+<!-- DateTimeRangePicker -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/daterangepicker.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-daterangepicker.min.js.下载"></script>
+
+<!-- Angular Heatmap -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/heatmap.min.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/angular-heatmap.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/toaster.js.下载"></script>
+
+<!-- Select2 -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/select2.min.js.下载"></script>
+
+<!-- layer -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/layer.js.下载"></script>
+
+<!-- D3 -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/d3.v3.min.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/sankey.js.下载"></script>
+
+<!-- EChart -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/echarts.min.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/westeros.js.下载"></script>
+
+<!-- App -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/app.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/config.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/config.lazyload.js.下载"></script>
+
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/default.router.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/defaultReports.router.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/advanceAnalysis.router.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/settings.router.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/promotionalActivity.router.js.下载"></script>
+
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/main.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-load.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/filters.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/resize.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/setnganimate.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-butterbar.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-focus.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-fullscreen.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-jq.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-module.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-nav.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-scroll.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-shift.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-toggleclass.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-toggle.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-validate.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/tj-condition.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/tj-device.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/tj-mobile-device.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/tj-retain-os.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/tj-retain-channel.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/tj-datetime.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ui-diagram.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/tj-filters.js.下载"></script>
+
+<!-- Factory -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/HttpRequest.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/DatePicker.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/UIUtil.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/$table.js.下载"></script>
+
+<!-- UserService -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Service.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/User.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Project.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/ChooseProject.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Site.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Ad.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Dimension.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/View.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Access.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Funnel.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/sankey.js(1).下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Path.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/HeatMap.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Filter.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Target.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Metrics.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Channel.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Event.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/PreReport.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/HiveReport.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/LeadsReport.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Chart.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/DrawChart.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/AccessCtrl.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/TimedTask.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Benchmark.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/BenchmarkEvent.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/$server.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Announcement.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Wxcampaign.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Wxchannel.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/AppCallback.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/Redirect.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/SDK.js.下载"></script>
+
+<!-- Lazy loading -->
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/header.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/index.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/confirm.js.下载"></script>
+<script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/changePwd.js.下载"></script>
+<!-- 加码 -->
+<script>
+	(function(a, e, f, g, b, c, d) {a.ClickiTrackerName = b;
+	a[b] = a[b] || function() {(a[b].queue = a[b].queue || []).push(arguments)};
+	a[b].start = +new Date; c = e.createElement(f); d = e.getElementsByTagName(f)[0];
+	c.async = 1; c.src = g; d.parentNode.insertBefore(c, d)
+	})(window, document, 'script', '//stm-cdn.cn.miaozhen.com/clicki.min.js', 'stm_clicki');
+	stm_clicki('create', 'dc-1658', 'auto');
+	stm_clicki('send', 'pageview');
+</script>
+
+
+<div class="layui-layer-move"></div><script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/behavioralRoute.js.下载"></script><script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/echarts.min.js.下载"></script><script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/westeros.js.下载"></script><div class="daterangepicker dropdown-menu ltr show-calendar opensright"><div class="calendar left"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_start" value=""><i class="fa fa-calendar glyphicon glyphicon-calendar"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"></div></div><div class="calendar right"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_end" value=""><i class="fa fa-calendar glyphicon glyphicon-calendar"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"></div></div><div class="ranges" style="display: none;"><div class="range_inputs"><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">确认</button> <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button></div></div></div><script src="./秒针统计 - SiteMonitor_专业的秒针统计系统_files/screenfull.min.js.下载"></script></body></html>
