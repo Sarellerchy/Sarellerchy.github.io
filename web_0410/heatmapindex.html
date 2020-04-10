@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script type="text/javascript" src="./incubator-echarts-master/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <link rel=stylesheet type=text/css href="/static.css">
+</head>
+<body style="alignment: center">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+    <div id="main" style="width: 600px;height:3500px; position: absolute">
+    </div>
+    <div style="width: 120px;height:60px; position: absolute; left:220px; top:1545px;">
+        <button type="button" style="background: transparent;border-width:0px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </button>
+    </div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var axisnums = 100;
+        var axisdata = [];
+        var x = [44,50,50,50,50,50,25,50]
+        var y = [55,69,64,73,59,90,91,39];
+        var weight = [20,16,15,14,13,18,10,5];
+        for (var i = 0; i < axisnums; i++) {
+            axisdata.push(i)
+        }
+        function makeHeatData() {
+            var heatData = [];
+            for (var i = 0; i < 2000; i++) {
+                heatData.push([
+                    x[i], y[i], weight[i]
+                ]);
+            }
+            return heatData;
+        }
+        var data = makeHeatData();
+        var img = new Image();
+        img.src='./image_home.png'
+        // console.log(data)
+        option = {
+            backgroundColor:
+                {
+                    type: 'pattern',
+                    repeat:'no-repeat',
+                    image: img
+                },
+            tooltip: {
+                show: false
+            },
+            geo: [{
+                map: 'world',
+                zoom: 0,
+                roam: true,
+                show: false,
+                id: 'geo1',
+                itemStyle: {
+                    areaColor: 'rgb(0,0,0,0)'
+                },
+                height: '100%'
+            }],
+            grid: {
+                show: true,
+                height: '100%',
+                width: '100%',
+                top: '0%',
+                left: 'center',
+                borderColor: 'rgb(0,0,0,0)'
+            },
+            calculable: true,
+            animation: false,
+            xAxis: {
+                type: 'value',
+                max: axisnums,
+                data: axisdata,
+                splitLine:{
+                    show:false
+                }
+            },
+            yAxis: {
+                type: 'value',
+                max: axisnums,
+                data: axisdata,
+                splitLine:{
+                    show:false
+                },
+                axisLine:{
+                    show:false
+                },
+            },
+            series: [{
+                id: 'test',
+                name: "fs",
+                type: 'heatmap',
+                coordinateSystem: 'cartesian2d',
+                data: data,
+                gridIndex: 0,
+                gradientColors: ['blue', 'cyan', 'lime', 'yellow', 'red'],
+                blurSize: 10,
+                pointSize: 10,
+                itemStyle: {
+                    show: true,color: 'rgb(0,0,0,0)'
+                }
+                }, ]
+        };
+        myChart.setOption(option);
+        function convertToPx(dataitem) {
+            var newxy = myChart.convertToPixel({
+                seriesId: 'test'
+            }, dataitem);
+            return newxy
+        }
+        function convertToGeo(dataitem) {
+            var pointobj = myChart.convertFromPixel({
+                geoId: 'geo1'
+            }, convertToPx(dataitem));
+            var point = [pointobj[0], pointobj[1]];
+            return point;
+        }
+        function convertData(data, x, y) {
+            var convertedData = [];
+            x = Math.ceil(x);
+            y = Math.ceil(y);
+            for (var i = 0; i < data.length; i++) {
+                if (data[i][0] >= x && data[i][0] <= y) {
+                    var geoCoord = convertToGeo([data[i][0], data[i][1]]);
+                    geoCoord.push(data[i][2]);
+                    convertedData.push(geoCoord);
+                    }
+            }
+            return convertedData;
+        }
+        var cusdata = convertData(data, 0, data.length);
+        // console.log(data.length)
+        setTimeout(function() {
+            myChart.setOption({
+                series: [{
+                    name: 'testheatmap',
+                    type: 'heatmap',
+                    id: 'testheatmap',
+                    coordinateSystem: 'geo',
+                    seriesIndex: 1,
+                    geoIndex: 0,
+                    data: cusdata,
+                    blurSize: 5,
+                    pointSize: 20
+                }, ],visualMap: {
+                    show: false,
+                    top: 'top',
+                    min: 0,
+                    max: 20,
+                    seriesIndex: 1,
+                    calculable: true,
+                    inRange: {
+                        color: ['blue', 'blue', 'green', 'yellow', 'red']
+                    }
+                }
+            });
+            }, 500);
+        myChart.on('dataZoom', function(params) {
+            var cusdata = convertData(data, axisnums * params.start / 100, axisnums * params.end / 100);
+            myChart.setOption({
+                series: [{
+                    name: 'testheatmap',type: 'heatmap',id: 'testheatmap',coordinateSystem: 'geo',seriesIndex: 1,geoIndex: 0,data: cusdata,blurSize: 13,pointSize: 8
+                }],});
+        })
+        // 使用刚指定的配置项和数据显示图表。
+        // myChart.setOption(option);
+    </script>
+</body>
+</html>
